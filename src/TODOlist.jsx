@@ -25,7 +25,7 @@ const TODOlist = () => {
   };
 
   return (
-    <div className="text-black mx-20 pt-10">
+    <div className="text-black mx-10 md:mx-20 md:pt-10">
       {todolist.length > 0 ? (
         todolist.map((todo, index) => (
           <div
