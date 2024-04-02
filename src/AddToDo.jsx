@@ -12,8 +12,10 @@ const AddToDo = () => {
         title: title,
         text: text
       }));
-
-
+      setTitle("")
+      setDescription("")
+      window.alert('Task added successfully!')
+      
   };
 
   return (
@@ -23,18 +25,19 @@ const AddToDo = () => {
         required
           type="text"
           name="title"
-          id="title" className=" bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400"
+          id="title" className=" text-black bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400"
           maxLength={30}
-          placeholder="give a name of task"
+          value={title}
+          placeholder="Insert name of task"
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
         required
           type="text"
-          name="title"
-          id="title" className=" bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400 col-span-2"
-          maxLength={30}
-          placeholder="give a name of task"
+          name="text"
+          id="text" className=" text-black bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400 col-span-2"
+          maxLength={30} value={text}
+          placeholder="insert description of task"
           onChange={(e) => setDescription(e.target.value)}
         />
         <button className=" hover:bg-blue-600 bg-blue-100 text-blue-800 hover:text-white shadow-sm hover:shadow-xl duration-300 shadow-blue-400 rounded-2xl" type="submit">Add task</button>
