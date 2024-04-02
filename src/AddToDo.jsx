@@ -52,7 +52,6 @@ const AddToDo = () => {
           name="text"
           id="text"
           className="text-black bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400 md:col-span-2"
-          maxLength={30}
           value={text}
           placeholder="Insert description of task"
           onChange={(e) => setDescription(e.target.value)}
