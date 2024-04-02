@@ -17,13 +17,13 @@ const AddToDo = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={addToToDo}>
+    <div className=" mx-20">
+      <form onSubmit={addToToDo} className=" grid grid-cols-4 gap-5">
         <input
         required
           type="text"
           name="title"
-          id="title"
+          id="title" className=" bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400"
           maxLength={30}
           placeholder="give a name of task"
           onChange={(e) => setTitle(e.target.value)}
@@ -32,12 +32,12 @@ const AddToDo = () => {
         required
           type="text"
           name="title"
-          id="title"
+          id="title" className=" bg-white px-5 py-2 rounded-2xl border-none outline-none shadow-xl shadow-blue-400 col-span-2"
           maxLength={30}
           placeholder="give a name of task"
           onChange={(e) => setDescription(e.target.value)}
         />
-        <button type="submit">Add task</button>
+        <button className=" hover:bg-blue-600 bg-blue-100 text-blue-800 hover:text-white shadow-sm hover:shadow-xl duration-300 shadow-blue-400 rounded-2xl" type="submit">Add task</button>
       </form>
     </div>
   );
